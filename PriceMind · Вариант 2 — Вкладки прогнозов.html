@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///Users/dinas/Downloads/pricemind-variant2_1.html -->
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PriceMind · Вариант 2 — Вкладки прогнозов</title>
+<link href="./PriceMind · Вариант 2 — Вкладки прогнозов_files/css2" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--a:#546FFF;--ab:#EDF0FC;--ah:#3d5ce8;--bk:#141522;--s:#54577A;--m:#8E92BC;--in:#B7B9D4;--st:#F5F5F7;--fb:#F5F5F7;--w:#FFFFFF;--g:#17C362;--gb:#EEFFEE;--or:#FF8C42;--orb:#FFF3EA;--r:#E53E3E;--br:10px;--brs:4px;--f:'Montserrat',sans-serif}
+body{font-family:var(--f);background:#FAFAFA;color:var(--bk);font-size:14px;min-height:100vh}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:252px;background:var(--w);border-right:1px solid var(--st);flex-shrink:0;display:flex;flex-direction:column;padding:36px 24px 32px;position:fixed;top:0;left:0;height:100vh;z-index:5}
+.logo{display:flex;align-items:center;gap:8px;margin-bottom:60px}
+.logo-icon{width:32px;height:32px;background:var(--a);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:18px;height:18px;fill:white}
+.logo-text{font-size:16px;font-weight:600;color:var(--bk)}
+.nav{display:flex;flex-direction:column;gap:8px}
+.nav-item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:var(--br);font-size:14px;font-weight:600;color:var(--m);cursor:pointer;text-decoration:none}
+.nav-item.active{background:var(--fb);color:var(--bk)}
+.nav-item svg{width:20px;height:20px;flex-shrink:0}
+.main{margin-left:252px;display:flex;flex-direction:column;min-height:100vh}
+.header{background:var(--w);height:80px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:1px solid var(--st);flex-shrink:0;position:sticky;top:0;z-index:4}
+.header-left{display:flex;align-items:center;gap:8px}
+.back{cursor:pointer;color:var(--m);font-size:20px;display:flex;align-items:center}
+.page-title{font-size:18px;font-weight:600;color:var(--bk);letter-spacing:-.03em}
+.header-right{display:flex;gap:12px}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--st);display:flex;align-items:center;justify-content:center;cursor:pointer;background:var(--w)}
+.icon-btn svg{width:20px;height:20px;stroke:var(--s)}
+.content{padding:32px;flex:1}
+.card{background:var(--w);border:1px solid var(--st);border-radius:var(--br);padding:20px;margin-bottom:20px}
+.card-title{font-size:16px;font-weight:500;color:var(--bk);margin-bottom:12px;letter-spacing:-.03em}
+.sep{height:1px;background:var(--st);margin-bottom:16px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.row{display:flex;gap:32px;align-items:flex-start;margin-bottom:10px}
+.lbl{font-size:14px;font-weight:500;color:var(--m);width:160px;flex-shrink:0;line-height:1.4}
+.val{font-size:14px;font-weight:500;color:var(--bk);line-height:1.4}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tag{background:var(--fb);padding:4px 6px;border-radius:var(--brs);font-size:12px;font-weight:400;color:var(--bk)}
+.link{color:var(--a);text-decoration:underline;cursor:pointer}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border-radius:var(--brs);font-size:13px;font-weight:500}
+.bi{background:var(--fb);color:var(--in)}
+.ba{background:var(--gb);color:var(--g)}
+.bac{background:var(--ab);color:var(--a)}
+.ozon{display:inline-block;padding:2px 6px;border:1px solid var(--st);border-radius:4px;font-size:11px;font-weight:700;color:#005BFF;margin-left:6px}
+.fb{background:var(--ab);border-radius:var(--br);padding:12px}
+.fi{background:var(--w);border-radius:var(--br);padding:16px;display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.met{display:flex;flex-direction:column;gap:8px}
+.ml{font-size:12px;font-weight:500;color:var(--m)}
+.mv{font-size:14px;font-weight:500;color:#242731}
+.md{display:inline-block;padding:2px 4px;border-radius:var(--brs);font-size:12px;font-weight:500}
+.dg{background:var(--gb);color:var(--g)}
+.dn{background:var(--fb);color:var(--m)}
+.fh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+.fhl{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ft{font-size:15px;font-weight:500;color:var(--bk);letter-spacing:-.03em}
+.pb{background:var(--ab);color:var(--a);padding:4px 8px;border-radius:var(--brs);font-size:12px;font-weight:500}
+.sb{background:var(--ab);color:var(--a);padding:4px 8px;border-radius:var(--brs);font-size:12px;font-weight:500;display:inline-flex;align-items:center;gap:4px}
+.hh{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding-bottom:12px;border-bottom:1px solid var(--st)}
+.btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:var(--br);font-size:14px;font-weight:600;font-family:var(--f);letter-spacing:-.03em;cursor:pointer;transition:all .15s;border:none;text-decoration:none;vertical-align:middle}
+.btn svg{flex-shrink:0}
+.bp{background:var(--a);color:white}
+.bp:hover{background:var(--ah)}
+.bs{background:var(--w);color:var(--a);border:1px solid var(--st)}
+.bs:hover{border-color:var(--a)}
+.bg{background:transparent;color:var(--s);border:1px solid var(--st)}
+.bg:hover{background:var(--fb)}
+.bi2{width:40px;padding:0;justify-content:center;background:transparent;border:none;color:var(--a)}
+.mb{display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border-radius:var(--br);border:1px solid var(--st);background:var(--w);color:var(--s);font-size:13px;font-weight:600;cursor:pointer;font-family:var(--f);margin-top:12px}
+.mb:hover{border-color:var(--a);color:var(--a)}
+.ov{display:none;position:fixed;inset:0;background:rgba(20,21,34,.45);z-index:100}
+.ov.show{display:flex}
+.ovr{align-items:flex-start;justify-content:flex-end}
+.ovc{align-items:center;justify-content:center}
+.sp{background:var(--w);width:420px;min-height:100vh;padding:28px;overflow-y:auto}
+.ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+.pt{font-size:17px;font-weight:600;color:var(--bk);letter-spacing:-.03em}
+.xb{width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--m);border-radius:6px;background:transparent;border:none;font-size:18px}
+.xb:hover{background:var(--fb)}
+.ro{padding:12px 14px;border:1px solid var(--st);border-radius:var(--br);cursor:pointer;transition:all .15s;margin-bottom:8px}
+.ro:hover{border-color:var(--a)}
+.ro.sel{border-color:var(--a);background:var(--ab)}
+.rot{display:flex;align-items:center;gap:10px}
+.rc{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--st);flex-shrink:0;transition:all .15s}
+.ro.sel .rc{border-color:var(--a);background:var(--a)}
+.rn{font-size:14px;font-weight:500;color:var(--bk)}
+.rd{font-size:12px;color:var(--m);margin-top:4px;padding-left:26px;line-height:1.4}
+.fl{font-size:12px;font-weight:500;color:var(--m);margin-bottom:6px;margin-top:16px}
+.fr{display:flex;align-items:center;gap:8px}
+.fi2{padding:8px 12px;border:1px solid var(--st);border-radius:var(--brs);font-size:14px;font-weight:500;color:var(--bk);font-family:var(--f);width:80px;background:var(--w)}
+.fi2:focus{outline:none;border-color:var(--a)}
+.fu{font-size:13px;color:var(--m)}
+.pm{background:var(--w);border-radius:var(--br);padding:28px;width:780px;max-width:95vw;max-height:90vh;overflow-y:auto}
+.pn{font-size:13px;color:var(--a);margin-bottom:16px;line-height:1.5}
+.pt2{width:100%;border-collapse:collapse;font-size:13px}
+.pt2 th{text-align:left;padding:8px 10px;color:var(--m);font-weight:500;border-bottom:1px solid var(--st);font-size:12px}
+.pt2 td{padding:9px 10px;border-bottom:1px solid var(--st);color:var(--bk)}
+.pt2 tr.wr td{background:var(--orb)}
+.wi{color:var(--or);margin-right:4px;font-size:12px}
+.sn{font-size:12px;color:var(--a);margin-top:12px;line-height:1.6}
+.cm{background:var(--w);border-radius:var(--br);padding:28px;width:460px;max-width:95vw}
+.ct{font-size:18px;font-weight:600;color:var(--bk);letter-spacing:-.03em}
+.cb{font-size:14px;color:var(--bk);margin:12px 0 14px;line-height:1.6}
+.cb strong{font-weight:600}
+.cw{font-size:13px;color:var(--a);font-weight:500;margin-bottom:8px}
+.cl{list-style:none}
+.cl li{font-size:13px;color:var(--a);padding:3px 0 3px 14px;position:relative;line-height:1.5}
+.cl li::before{content:"·";position:absolute;left:4px;color:var(--a);font-size:16px;top:0}
+.tn{display:flex;align-items:flex-end;border-bottom:1px solid var(--st);margin-bottom:20px;overflow-x:auto}
+.ti{padding:10px 16px;font-size:13px;font-weight:600;color:var(--m);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:var(--f);letter-spacing:-.02em;transition:all .15s;white-space:nowrap}
+.ti:hover{color:var(--a)}
+.ti.at{color:var(--a);border-bottom-color:var(--a)}
+.ts{display:inline-block;font-size:10px;padding:2px 6px;border-radius:10px;margin-left:6px;font-weight:500}
+.tsa{background:var(--gb);color:var(--g)}
+.tsd{background:var(--fb);color:var(--m)}
+.ta{padding:10px 14px;font-size:20px;color:var(--a);cursor:pointer;line-height:1;font-weight:300;border:none;background:transparent;font-family:var(--f)}
+.sm{background:var(--w);border-radius:var(--br);padding:28px;width:420px;max-width:95vw}
+.sn2{background:var(--gb);border:1px solid #b2f5d0;border-radius:var(--brs);padding:10px 14px;font-size:13px;color:#0a7a3e;font-weight:500;display:none;align-items:center;gap:8px;margin-bottom:16px}
+.sn2.show{display:flex}
+.ec{text-align:center;padding:32px;background:var(--fb);border-radius:var(--br)}
+.ec p{font-size:13px;color:var(--m);margin-bottom:16px}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="logo">
+    <div class="logo-icon"><svg viewBox="0 0 18 18"><polygon points="9,2 16,6 16,12 9,16 2,12 2,6"></polygon></svg></div>
+    <span class="logo-text">PriceMind</span>
+  </div>
+  <nav class="nav">
+    <a class="nav-item" href="file:///Users/dinas/Downloads/pricemind-variant2_1.html#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8E92BC" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+      Аналитика
+    </a>
+    <a class="nav-item active" href="file:///Users/dinas/Downloads/pricemind-variant2_1.html#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#141522" stroke-width="1.5"><path d="M4 6h16M4 10h16M4 14h10"></path></svg>
+      Сегменты
+    </a>
+    <a class="nav-item" href="file:///Users/dinas/Downloads/pricemind-variant2_1.html#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#8E92BC" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      Настройки
+    </a>
+  </nav>
+</aside>
+<main class="main">
+<header class="header">
+  <div class="header-left">
+    <span class="back">←</span>
+    <span class="page-title">Прогноз сегмента "Женские Платья Озон"</span>
+  </div>
+  <div class="header-right">
+    <div class="icon-btn"><svg viewBox="0 0 20 20" fill="none" stroke-width="1.5"><path d="M10 2a6 6 0 0 1 6 6v3l2 3H2l2-3V8a6 6 0 0 1 6-6zM8 17a2 2 0 0 0 4 0" stroke="currentColor"></path></svg></div>
+    <div class="icon-btn"><svg viewBox="0 0 20 20" fill="none" stroke-width="1.5"><circle cx="10" cy="7" r="3" stroke="currentColor"></circle><path d="M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor"></path></svg></div>
+  </div>
+</header>
+<div class="content">
+<div class="two-col">
+  <div class="card">
+    <div class="card-title">О сегменте</div><div class="sep"></div>
+    <div class="row"><span class="lbl">Название и МП</span><span class="val">Женские платья Озон<span class="ozon">OZON</span></span></div>
+    <div class="row"><span class="lbl">Кол-во SKU</span><span class="val">316 шт.</span></div>
+    <div class="row"><span class="lbl">Рекламные расходы</span><span class="val">18%</span></div>
+    <div class="row"><span class="lbl">Категории</span><div class="tags"><span class="tag">Женские платья</span><span class="tag">Женская обувь</span><span class="tag">Женские юбки</span><span class="tag">Женские сарафаны</span></div></div>
+    <div class="row"><span class="lbl">Источник</span><span class="val link">Evelyn Shop All SKUs 072025</span></div>
+    <div class="row"><span class="lbl">Дата загрузки</span><span class="val">15.07.2025 14:53</span></div>
+    <button class="mb">Управление товарами <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#54577A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+  </div>
+  <div class="card">
+    <div class="card-title">Стратегия</div><div class="sep"></div>
+    <div class="row"><span class="lbl">Стратегия</span><span class="val" style="font-weight:600;">Равномерный рост маржи и выручки</span></div>
+    <div class="row"><span class="lbl">Лимит по марже</span><span class="val">30%</span></div>
+    <div class="row"><span class="lbl">Статус</span><span class="badge bi" id="statusBadge"><span style="width:8px;height:8px;border-radius:50%;background:#B7B9D4;display:inline-block;margin-right:4px;"></span>Неактивна</span></div>
+    <div class="row"><span class="lbl">Дата последнего применения</span><span class="val">—</span></div>
+  </div>
+</div><div class="card">
+  <div style="font-size:13px;font-weight:600;color:var(--m);margin-bottom:8px;">Прогнозы</div>
+  <div class="tn" id="tabsNav">
+    <div class="ti at" onclick="swTab(0,this)">Прогноз 1 <span class="ts tsa">активен</span></div>
+    <div class="ti" onclick="swTab(1,this)">Прогноз 2 <span class="ts tsd">черновик</span></div>
+    <button class="ta" onclick="addTab()" title="Новый прогноз">+</button>
+  </div>
+
+  <div id="tc0" style="display: block;">
+    <div style="font-size:12px;color:var(--m);margin-bottom:12px;">20.07 – 27.07.2025 · Равномерный рост маржи и выручки</div>
+    <div class="fb"><div class="fi">
+      <div class="met"><div class="ml">Выручка</div><div class="mv">4 350 670 ₽</div><div class="md dg">+1 486 280 ₽</div></div>
+      <div class="met"><div class="ml">Маржа, руб.</div><div class="mv">1 248 642 ₽</div><div class="md dg">+852 660 ₽</div></div>
+      <div class="met"><div class="ml">Маржа, %</div><div class="mv">28,7%</div><div class="md dg">+7,3%</div></div>
+      <div class="met"><div class="ml">Продажи, шт.</div><div class="mv">580 шт.</div><div class="md dg">+183 шт.</div></div>
+      <div class="met"><div class="ml">Оборачиваемость</div><div class="mv">35 д</div><div class="md dg">−12 д</div></div>
+      <div class="met"><div class="ml">Средняя цена</div><div class="mv">7 500 ₽</div><div class="md dn">150 ₽</div></div>
+      <div class="met"><div class="ml">Средняя скидка</div><div class="mv">7%</div><div class="md dn">2,2%</div></div>
+    </div></div>
+    <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--st);">
+      <button class="btn bg" style="color:var(--r);border-color:#fecaca;">■ Остановить стратегию</button>
+      <button class="btn bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#54577A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> Скачать Excel</button>
+    </div>
+  </div>
+
+  <div id="tc1" style="display: none;">
+    <div style="font-size:12px;color:var(--m);margin-bottom:12px;">Черновик · Максимум прибыли · Создан 07.04.2026</div>
+    <div class="fb"><div class="fi">
+      <div class="met"><div class="ml">Выручка</div><div class="mv">5 120 000 ₽</div><div class="md dg">+2 255 610 ₽</div></div>
+      <div class="met"><div class="ml">Маржа, руб.</div><div class="mv">1 640 000 ₽</div><div class="md dg">+1 244 018 ₽</div></div>
+      <div class="met"><div class="ml">Маржа, %</div><div class="mv">32,0%</div><div class="md dg">+10,6%</div></div>
+      <div class="met"><div class="ml">Продажи, шт.</div><div class="mv">490 шт.</div><div class="md dg">+93 шт.</div></div>
+      <div class="met"><div class="ml">Оборачиваемость</div><div class="mv">28 д</div><div class="md dg">−7 д</div></div>
+      <div class="met"><div class="ml">Средняя цена</div><div class="mv">10 449 ₽</div></div>
+      <div class="met"><div class="ml">Средняя скидка</div><div class="mv">4%</div></div>
+    </div></div>
+    <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--st);">
+      <button class="btn bg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="#54577A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg> Скачать Excel</button>
+      <button class="btn bs" onclick="op(&#39;schedOv&#39;)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="#546FFF" stroke-width="1.5"></rect><line x1="16" y1="2" x2="16" y2="6" stroke="#546FFF" stroke-width="1.5"></line><line x1="8" y1="2" x2="8" y2="6" stroke="#546FFF" stroke-width="1.5"></line><line x1="3" y1="10" x2="21" y2="10" stroke="#546FFF" stroke-width="1.5"></line></svg>
+        Запустить по расписанию
+      </button>
+      <button class="btn bp" onclick="op(&#39;schedOv&#39;)"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.17931 14.8543C8.14421 14.9938 7.2668 18.28 2.44056 18.28C2.24962 18.28 2.0665 18.2041 1.93149 18.0691C1.79647 17.934 1.72063 17.7509 1.72063 17.5599C1.72063 12.7329 5.00621 11.8554 5.1457 11.8202C5.33103 11.7739 5.52716 11.8032 5.69095 11.9015C5.85474 11.9998 5.97276 12.1592 6.01907 12.3445C6.06537 12.5299 6.03615 12.7261 5.93785 12.8899C5.83954 13.0537 5.68019 13.1717 5.49487 13.218C5.41387 13.2405 3.47726 13.8067 3.19468 16.8057C6.1932 16.523 6.76015 14.5897 6.78354 14.4997C6.83128 14.3146 6.95058 14.156 7.11522 14.0589C7.27985 13.9617 7.47632 13.934 7.66141 13.9817C7.8465 14.0295 8.00505 14.1488 8.10217 14.3135C8.1993 14.4781 8.22704 14.6746 8.17931 14.8597V14.8543ZM16.5485 8.78796L16.1193 9.21729V14.4673C16.1203 14.6572 16.0836 14.8453 16.0113 15.0208C15.939 15.1964 15.8326 15.3558 15.6981 15.4898L12.6096 18.577C12.4764 18.7111 12.318 18.8176 12.1434 18.8902C11.9689 18.9628 11.7817 19.0001 11.5927 19C11.4367 19 11.2817 18.9747 11.1337 18.9253C10.8797 18.8413 10.6542 18.6878 10.4828 18.4823C10.3113 18.2768 10.2008 18.0275 10.1636 17.7624L9.68037 14.2981L5.70185 10.319L2.23988 9.83562C1.97453 9.7984 1.72483 9.68787 1.51887 9.51645C1.31291 9.34504 1.15886 9.11955 1.07404 8.86534C0.989225 8.61114 0.977012 8.3383 1.03878 8.07753C1.10054 7.81677 1.23383 7.57841 1.42365 7.38927L4.51036 4.30028C4.64434 4.1658 4.80371 4.0593 4.97922 3.98698C5.15472 3.91467 5.34285 3.87798 5.53266 3.87905H10.7819L11.2111 3.44972C13.6121 1.04927 16.5053 0.945767 17.6374 1.01327C17.9884 1.03461 18.3195 1.1837 18.5682 1.43241C18.8169 1.68113 18.9659 2.01227 18.9873 2.36336C19.053 3.49293 18.9495 6.38661 16.5494 8.78796H16.5485ZM2.44056 8.40993L5.78374 8.87616L9.342 5.31914H5.53266L2.44056 8.40993ZM7.05892 9.63941L10.3598 12.9408L15.5298 7.77C16.2265 7.07785 16.7671 6.24456 17.1151 5.32613C17.4631 4.4077 17.6105 3.4254 17.5474 2.44526C16.5679 2.38451 15.5868 2.53349 14.6695 2.88225C13.7522 3.23102 12.9198 3.77153 12.228 4.46769L7.05892 9.63941ZM14.6794 10.6574L11.122 14.2153L11.59 17.5599L14.6794 14.4673V10.6574Z" fill="white"></path></svg> Запустить сейчас</button>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+</div>
+<div class="ov ovc" id="schedOv">
+  <div class="sm">
+    <div class="ph"><span class="pt">Запустить Прогноз 2?</span><button class="xb" onclick="cl(&#39;schedOv&#39;)">×</button></div>
+    <div class="cb" style="font-size:13px;">Текущая стратегия <strong>"Равномерный рост маржи и выручки"</strong> будет остановлена. Выберите, когда запустить новую стратегию.</div>
+    <div style="font-size:13px;font-weight:600;color:var(--bk);margin-bottom:10px;">Когда запустить?</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px;">
+      <div class="ro sel" onclick="selR(this)"><div class="rot"><div class="rc"></div><span class="rn" style="font-size:13px;">Немедленно</span></div></div>
+      <div class="ro" onclick="selR(this)"><div class="rot"><div class="rc"></div><span class="rn" style="font-size:13px;">По дате и времени</span></div></div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;gap:10px;">
+      <button class="btn bg" onclick="cl(&#39;schedOv&#39;)">Отмена</button>
+      <button class="btn bp" onclick="cl(&#39;schedOv&#39;)">Подтвердить →</button>
+    </div>
+  </div>
+</div>
+<script>
+function op(id){document.getElementById(id).classList.add('show')}
+function cl(id){document.getElementById(id).classList.remove('show')}
+function selR(el){el.closest('.sp,.sm').querySelectorAll('.ro').forEach(o=>{o.classList.remove('sel')});el.classList.add('sel')}
+</script>
+<script>
+var tc=1;
+function swTab(idx,el){for(var i=0;i<=tc;i++){var t=document.getElementById('tc'+i);if(t)t.style.display=i===idx?'block':'none';}document.querySelectorAll('#tabsNav .ti').forEach((t,i)=>t.classList.toggle('at',i===idx));}
+function addTab(){tc++;var nav=document.getElementById('tabsNav');var add=nav.querySelector('.ta');var nt=document.createElement('div');nt.className='ti';var idx=tc;nt.innerHTML='Прогноз '+(idx+1)+' <span class="ts tsd">новый</span>';nt.onclick=function(){swTab(idx,nt)};nav.insertBefore(nt,add);var c=document.createElement('div');c.id='tc'+idx;c.style.display='none';c.innerHTML='<div style="font-size:12px;color:var(--m);margin-bottom:12px;">Новый прогноз · не рассчитан</div><div class="ec"><p>Настройте стратегию и запустите расчёт прогноза</p><button class="btn bp" style="font-size:13px;">Настроить и рассчитать →</button></div>';nav.closest('.card').appendChild(c);swTab(idx,nt);}
+</script>
+
+</body></html>
